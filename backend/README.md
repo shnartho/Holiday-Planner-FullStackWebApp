@@ -1,9 +1,9 @@
-This is the backend
+👨‍🚒 Backend with Django and Postgres
 ==================================================
 
-Getting Started | Run In Docker Containers
--------------------------------------------
-To run django in docker container, make sure docker in installed in your local machine. As I have already created docker-compose and docker file so you just need to run the docker-compose. 
+📗 Getting Started | Run In Docker Containers🐟
+------------------------------------------------
+To run django in docker container, make sure docker in installed in your local machine. As I have already created docker-compose and docker file so you just need to run the docker-compose. The docker compose will create container for django backend and also a postgres container for Database. 
 
 1. Open terminal and run:
 
@@ -13,7 +13,9 @@ To run django in docker container, make sure docker in installed in your local m
 
         $ docker-compose up --build
 
-Getting Started | Run Locally 
+3. Open http://127.0.0.1:8000/ in a web browser to view the holiday planner application.✌️
+
+📗 Getting Started | Run Locally 
 ------------------------------
 Here is a simple guide if you wish to run and test my backend (django) in your locally.
 
@@ -34,4 +36,4 @@ Here is a simple guide if you wish to run and test my backend (django) in your l
 
         $ python manage.py runserver
 
-6. Open http://127.0.0.1:8000/ in a web browser to view your application.
+6. Open http://127.0.0.1:8000/ in a web browser to view the holiday planner application.✌️
