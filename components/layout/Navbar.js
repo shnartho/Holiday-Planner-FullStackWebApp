@@ -18,12 +18,12 @@ function classNames(...classes) {
 export default function Navbar() {
     const [profile, setProfile] = useState({})
     const user = useSelector(state => state.authentication.user);
+    const dispatch = useDispatch();
 
     useEffect(()=>{
         setProfile(user);
-    }, [])
+    }, [user]);
 
-    const dispatch = useDispatch();
     const logoutHandler = (e) => {
         console.log(`logoutHandler called`)
         e.preventDefault();

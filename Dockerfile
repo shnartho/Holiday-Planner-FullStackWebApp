@@ -1,32 +1,14 @@
-# Base image
-FROM python:3.9-slim-buster
+FROM node as builder
 
-# Set environment variables
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
-
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    netcat \
-    postgresql-client
-
-# Create and set working directory
-RUN mkdir /app
 WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run dev
 
-# Install Python dependencies
-COPY requirements.txt /app/
-RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 
-# Copy application code
-COPY . /app/
-
-# Set up entrypoint
-COPY ./entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-
-# Expose port
-EXPOSE 8000
-
-# Run the entrypoint script
-ENTRYPOINT ["/entrypoint.sh"]
+FROM nginx:alpine
+# Copy the build files from the builder stage to the nginx server
+COPY --from=builder /app/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
