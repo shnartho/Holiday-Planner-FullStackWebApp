@@ -1,0 +1,14 @@
+# .dockerignore
+
+# Exclude development files
+node_modules
+npm-debug.log
+
+# Exclude build artifacts
+.next
+
+# Exclude other unnecessary files and directories
+.DS_Store
+.env
+.git
+.gitignore
