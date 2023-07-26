@@ -6,4 +6,3 @@ psycopg2==2.8.6
 drf-spectacular==0.26.1
 django-currentuser==0.5.3
 pillow==9.4.0
-gunicorn==20.1.0
