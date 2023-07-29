@@ -5,6 +5,7 @@ node_modules
 npm-debug.log
 
 backend
+kubernetes-deployment
 # Exclude build artifacts
 .next
 

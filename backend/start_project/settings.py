@@ -112,6 +112,8 @@ DATABASES = {
 }
 
 """
+
+#docker-compose connection
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
