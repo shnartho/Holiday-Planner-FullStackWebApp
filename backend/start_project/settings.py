@@ -19,8 +19,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+MINIKUBE_IP = os.environ.get('MINIKUBE_IP', 'localhost')
+MINIKUBE_PORT = os.environ.get('MINIKUBE_PORT', '3000')
 
 CORS_ALLOWED_ORIGINS = [
+    f"http://{MINIKUBE_IP}:{MINIKUBE_PORT}",
     "http://localhost:3000",
     "http://127.0.0.1:3000",
 ]

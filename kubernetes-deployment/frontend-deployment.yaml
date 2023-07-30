@@ -14,9 +14,10 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: shnartho/holidayplanner-backend-image:1.0
+          image: shnartho/holidayplanner-frontend-image:2.0
+          envFrom:
+            - configMapRef:
+                name: frontend-config
           ports:
             - containerPort: 3000
-          env:
-            - name: NODE_ENV
-              value: production
+          

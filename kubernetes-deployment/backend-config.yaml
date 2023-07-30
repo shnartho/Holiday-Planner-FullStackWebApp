@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+data:
+  MINIKUBE_IP: "192.168.49.2"
+  MINIKUBE_PORT: "30000"
