@@ -8,11 +8,11 @@
 
 
 ## Run/Test
-🟢 **Using Minikube** <br>To run using docker-compose, run **"docker-compose up --build"** in the current directory. Please make sure make sure the database credentials of the docker-compsoe file and /backend/start_project/settings.py match. Also in /backend/entrypoint.sh make sure you use the hostname instead of db-service. After 
+🟢 **Using Minikube** <br>To run using minikube, make sure you have minikube installed in your mahchine. 
 ![minikube](./images/minikube-front.png)
 <div style="display: flex; justify-content: space-between;">
-  <img src="./images/minikubeip.png" alt="Image 1" width="28%" height="100"/>
-  <img src="./images/minikube-back.png" alt="Image 3" width="71%" height="400"/>
+  <img src="./images/minikubeip.png" alt="Image 1" width="22%" height="80"/>
+  <img src="./images/minikube-back.png" alt="Image 3" width="77%" height="400"/>
 </div>
 
 🟢 **Using Docker-Compose** <br>To run using docker-compose, run **"docker-compose up --build"** in the current directory. Please make sure make sure the database credentials of the docker-compsoe file and /backend/start_project/settings.py match. Also in /backend/entrypoint.sh make sure you use the hostname instead of db-service. After 
