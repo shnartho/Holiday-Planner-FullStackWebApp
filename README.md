@@ -4,7 +4,7 @@
 
  
 #### CI/CD Workflow
-![Application](./images/forGithub1.png)
+![Application](./images/forGithub1.jpeg)
 
 ## Execute and Evaluate the Web Application
 🟢 **Using Minikube** <br>To run using minikube, make sure you have minikube installed in your mahchine. If your minikube running on docker driver, use these command **Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All** and **minikube config set driver hyperv**. The deploy the frontend, backend and database in minikube kubernetes cluster go to ./kubernetes-deployment and run,<br> 
