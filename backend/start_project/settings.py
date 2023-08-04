@@ -24,6 +24,7 @@ MINIKUBE_PORT = os.environ.get('MINIKUBE_PORT', '3000')
 
 CORS_ALLOWED_ORIGINS = [
     f"http://{MINIKUBE_IP}:{MINIKUBE_PORT}",
+    "http://172.25.155.111:30000",
     "http://localhost:3000",
     "http://127.0.0.1:3000",
 ]
@@ -115,7 +116,7 @@ DATABASES = {
 }
 
 """
-
+"""
 #docker-compose connection
 DATABASES = {
     'default': {
@@ -124,6 +125,18 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': 'db',
+        'PORT': '5432',
+    }
+}
+"""
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'db-service',
         'PORT': '5432',
     }
 }

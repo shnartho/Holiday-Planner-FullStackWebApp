@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: shnartho/holidayplanner-frontend-image:2.0
+          image: shnartho/holidayplanner-frontend-image:3.0
           envFrom:
             - configMapRef:
                 name: frontend-config

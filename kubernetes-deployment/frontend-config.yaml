@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: backend-config
+  name: frontend-config
 data:
-  MINIKUBE_IP: "192.168.49.2" 
+  MINIKUBE_IP: "localhost" 
   MINIKUBE_PORT: "30001"
   NODE_ENV: "production"

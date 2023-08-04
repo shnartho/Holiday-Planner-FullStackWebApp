@@ -1,6 +1,6 @@
 #!/bin/bash
 
-while ! nc -z -v -w30 db 5432; do
+while ! nc -z -v -w30 db-service 5432; do
   echo "Waiting for the database to be available..."
   sleep 2
 done

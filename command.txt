@@ -1,0 +1,29 @@
+docker build -t holidayplanner-frontend-image:tag .
+docker build -t holidayplanner-backend-image:tag .
+
+docker tag holidayplanner-frontend-image:tag shnartho/holidayplanner-frontend-image:tag
+docker tag holidayplanner-backend-image:tag shnartho/holidayplanner-backend-image:tag
+
+docker login
+docker push shnartho/holidayplanner-backend-image:tag
+
+---
+kubectl exec -it podName -- /bin/bash
+kubectl get pod
+kubectl get deployment
+kubectl get svc
+kubectl get node
+kubectl logs serviceName
+
+---
+minikube ip 
+minikube status 
+minikube service serviceName (For portforwarding if minikube is running on docker driver)
+
+---
+// Make sure that minikube is running on windows not in docker driver
+
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+minikube config set driver hyperv
+
+
